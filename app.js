@@ -8,16 +8,20 @@ app.get('/', function(req, res) {
 });
 app.use('/client', express.static(__dirname + '/client'));
 app.use(express.static(path.join(__dirname, 'public')));
-serv.listen(2000);
 
+serv.listen(2000);
 console.log('Server started.');
 
-var io = require('socket.io')(serv, {});
+var SOCKET_LIST = {};
+    io = require('socket.io')(serv, {});
 io.sockets.on('connection', function(socket) {
-    console.log('socket connection');
+    socket.id = Math.random();
+    SOCKET_LIST[socket.id] = socket;
 
-    socket.on('happy', function(){
-        console.log('happy');
+    console.log('socket connection', socket.id);
+
+    socket.on('button', function(){
+        console.log('Button');
     });
 
     socket.emit('eegg', {msg:'You found the Easteregg!'});

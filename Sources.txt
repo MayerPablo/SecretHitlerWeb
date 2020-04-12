@@ -2,4 +2,16 @@
 https://www.youtube.com/watch?v=PfSwUOBL1YQ
 https://www.youtube.com/watch?v=Fn03ucDEcb4
 https://stackoverflow.com/questions/13395742/can-not-get-css-file
+https://www.w3schools.com/jsref/dom_obj_text.asp
+https://www.w3schools.com/js/js_htmldom_css.asp
+https://www.dafont.com/de/forum/read/253835/secret-hitler-logo-font
+https://www.onlinewebfonts.com/download/34ef7a65a4825cfc84856db83a1ac382
+(index):1 Refused to apply style from 'http://127.0.0.1:2000/css/index.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+https://wiki.selfhtml.org/wiki/CSS/SASS
+https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+https://www.456bereastreet.com/archive/201603/why_i_dont_use_css_preprocessors/
+https://www.sololearn.com/Discuss/259009/error-cannot-set-property-onclick-on-null
+https://stackoverflow.com/questions/16562577/how-can-i-make-a-button-redirect-my-page-to-another-page
+https://stackoverflow.com/questions/3244361/can-i-access-variables-from-another-file
+https://www.w3schools.com/js/js_htmldom_html.asp
 13.04.2020

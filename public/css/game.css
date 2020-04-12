@@ -1,0 +1,36 @@
+@import url(//db.onlinewebfonts.com/c/34ef7a65a4825cfc84856db83a1ac382?family=Eskapade);
+
+body {
+    background-color: #302F2F;
+    align-content: center;
+    font-family: eskapade;
+}
+
+#version{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+    margin: 0vw 0vw 0vw 0vw;
+    padding: 0vw 0vw 0vw 0vw;
+    width:10vw;
+    text-align: left;
+    font-size: 1.1vw;
+    color:#F3E5C3;
+}
+
+#lpf {
+    margin-top: 8vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45vw;
+}
+
+#fpf {
+    margin-bottom: 8vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45vw;
+}

@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
 <link rel="stylesheet" type="text/css" href="/css/index.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-<script>
-    var socket = io();
-    var happy = function(){
-        socket.emit('happy');
-    }
-    socket.on('eegg', function(data){
-        console.log(data.msg);
-    });
-</script>
 </head>
 
-
 <body>
-    <button onclick="happy()">Happy</button>
-    <img src='\client\img\logo.png'></img>
-    <h1>Press enter to play</h1>
+    <p id='version'>Alpha version 0.1</p>
+    <img id='logo' src='\client\img\logo.png'></img>
+    <input type="text" id="input_name" value="">
+    <h1>Enter your name to play</h1>
+    <p id="display_name"></p>
+    <button id='play_button'>Play</button>
 </body>
 
+<script type="text/javascript" src="\client\js\index.js"></script>
 
 </html>

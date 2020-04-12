@@ -1,10 +1,99 @@
+@import url(//db.onlinewebfonts.com/c/34ef7a65a4825cfc84856db83a1ac382?family=Eskapade);
+
 body {
-    background-color: rgb(252, 220, 182);
+    background-color: #F3E5C3;
+    align-content: center;
+    font-family: eskapade;
 }
 
 h1 {
-    color: rgb(29, 29, 29);
-    font-family: verdana;
-    font-size: 50px;
+    color: #373633;
+    font-size: 30px;
     text-align: center;
+    text-shadow: 1px 1px #CA714D, 2px 2px #CA714D, 3px 3px #CA714D, 4px 4px #CA714D;
+}
+
+#version{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+    margin: 0vw 0vw 0vw 0vw;
+    padding: 0vw 0vw 0vw 0vw;
+    width:10vw;
+    text-align: left;
+    font-size: 1.1vw;
+    color:#373633;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#input_name {
+    font-family: eskapade;
+    transition-duration: 200ms;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    font-size: 2vw;
+    text-align: center;
+    background-color: white;
+    color: #373633;
+    border-color: #373633;
+    border-style: solid;
+    border-radius: 1.5vw;
+    border-width: 0.3vw;
+}
+
+#input_name:hover {
+    transition-duration: 200ms;
+    border-color:#5A9BA6;
+    border-radius: 0px;
+}
+
+#input_name:focus {
+    transition-duration: 200ms;
+    border-color:#5A9BA6;
+    border-radius: 0px;
+}
+
+#display_name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    font-size: 2vw;
+    color:#5A9BA6;
+}
+
+#play_button {
+    font-family: eskapade;
+    transition-duration: 400ms;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    font-size: 2vw;
+    background-color: #373633;
+    color: white;
+    border-color: #373633;
+    border-style: solid;
+    border-radius: 1.5vw;
+    border-width: 0.3vw;
+    text-shadow: 1px 1px #CA714D, 2px 2px #CA714D, 3px 3px #CA714D, 4px 4px #CA714D;
+}
+
+#play_button:hover {
+    transition-duration: 400ms;
+    background-color: #5A9BA6;
+    color: whitesmoke;
+    border-color: #5A9BA6;
+    border-radius: 0px;
+    border-width: 0.3vw;
+    text-shadow: 1px 1px #373633, 2px 2px #373633, 3px 3px #373633, 4px 4px #373633;
 }
