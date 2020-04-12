@@ -1,0 +1,30 @@
+{
+  "name": "secret_hitler",
+  "version": "1.0.0",
+  "description": "tabletopgame for web",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MayerPablo/SecretHitlerWeb.git"
+  },
+  "keywords": [
+    "Game",
+    "Web",
+    "Server",
+    "Open-Source"
+  ],
+  "author": "MayerPablo",
+  "license": "license.txt",
+  "bugs": {
+    "url": "https://github.com/MayerPablo/SecretHitlerWeb/issues"
+  },
+  "homepage": "https://github.com/MayerPablo/SecretHitlerWeb#readme"
+}
