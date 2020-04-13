@@ -17,3 +17,5 @@ https://www.w3schools.com/js/js_htmldom_html.asp
 13.04.2020
 https://github.com/angular/angular-cli/issues/8160
 https://www.youtube.com/watch?v=vOe0ysNsNCo --SEHR WICHTIG, DANKE, DANKE
+https://www.w3schools.com/graphics/canvas_images.asp
+https://yingtongli.me/blog/2019/12/25/secret-hitler.html

@@ -1,10 +1,25 @@
 @import url(//db.onlinewebfonts.com/c/34ef7a65a4825cfc84856db83a1ac382?family=Eskapade);
+@import url(//db.onlinewebfonts.com/c/af089c51d74ffa3c6a675fd6024b302b?family=Futura+Hv+BT);
+@import url(//db.onlinewebfonts.com/c/484a35f584fd87cc8f71ea6fef2d3be5?family=Germania);
+@import url(//db.onlinewebfonts.com/c/1c587cd97662ab09cb8ba96867f212e7?family=DINOT-Regular);
 
 body {
     background-color: #302F2F;
     align-content: center;
     font-family: eskapade;
 }
+
+#lib_policy_one {
+    opacity: 0;
+    transition-timing-function: ease-out;
+    z-index: 1;
+    position: absolute;
+    left: 29.5vw;
+    top: 0px;
+    width:5.7vw;
+    height:auto;
+}
+
 
 #version{
     position: absolute;
@@ -17,22 +32,27 @@ body {
     text-align: left;
     font-size: 1.1vw;
     color:#F3E5C3;
+    text-shadow: 1px 1px #CA714D, 2px 2px #CA714D, 3px 3px #CA714D, 4px 4px #CA714D;
 }
 
 #lpf {
-    margin-top: 8vw;
+    z-index:-5;
+    margin-top: 10.5vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 45vw;
+    width: 50vw;
+    height:auto;
 }
 
 #fpf {
-    margin-bottom: 8vw;
+    z-index:-5;
+    margin-bottom: 25vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 45vw;
+    width: 50vw;
+    height: auto;
 }
 
 #player_name {
@@ -40,4 +60,17 @@ body {
     text-align: right;
     font-size: 1.5vw;
     color: #F3E5C3;
+    text-shadow: 1px 1px #CA714D, 2px 2px #CA714D, 3px 3px #CA714D, 4px 4px #CA714D;
+}
+
+#player_role{
+    position: absolute;
+    right: 0.5vw;
+    top: 2.2vw;
+    z-index: -2;
+    margin: 0vw 0vw 0vw 0vw;
+    text-align: right;
+    font-size: 1.5vw;
+    color: #C13423;
+    text-shadow: 1px 1px #990200, 2px 2px #990200, 3px 3px #990200, 4px 4px #990200;
 }
