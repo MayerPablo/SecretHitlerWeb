@@ -4,7 +4,9 @@
   "description": "tabletopgame for web",
   "main": "app.js",
   "dependencies": {
+    "exports": "0.0.1",
     "express": "^4.17.1",
+    "global": "^4.4.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {},

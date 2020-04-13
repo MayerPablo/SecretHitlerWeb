@@ -1,1 +1,1 @@
-document.getElementById('player_name').innerHTML = player_name;
+document.getElementById('player_name').innerHTML = localStorage.name;

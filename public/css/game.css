@@ -34,3 +34,10 @@ body {
     margin-right: auto;
     width: 45vw;
 }
+
+#player_name {
+    margin: 0vw 0vw 0vw 0vw;
+    text-align: right;
+    font-size: 1.5vw;
+    color: #F3E5C3;
+}

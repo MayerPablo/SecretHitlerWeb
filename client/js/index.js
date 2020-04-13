@@ -14,6 +14,7 @@ document.getElementById('play_button').onclick = function(){
     document.getElementById('display_name').style.color = '#5A9BA6'
     document.getElementById('input_name').style.borderColor = '#5A9BA6'
     document.getElementById("display_name").innerHTML = player_name;
+    localStorage.setItem("name", player_name);
     socket.emit(player_name);
     location.href='client/game.html'
     }
@@ -21,5 +22,3 @@ document.getElementById('play_button').onclick = function(){
 socket.on('eegg', function(data){
     console.log(data.msg);
 });
-player_name = player_name;
-console.log(player_name);
