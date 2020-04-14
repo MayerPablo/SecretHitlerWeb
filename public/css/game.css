@@ -9,6 +9,7 @@
 }
 
 body {
+    margin: 0;
     background-color: #302F2F;
     align-content: center;
     font-family: eskapade;
@@ -18,15 +19,19 @@ body {
     opacity: 0;
     position: absolute;
     transition-timing-function: ease-out;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+    padding: 0;
     top: 0px;
     width:5.7vw;
-    min-width: 45px;
+    min-width: 40px;
     height:auto;
 }
-
-
+/*
+#dwadwad {
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
 #version{
     position: absolute;
     left: 0px;
