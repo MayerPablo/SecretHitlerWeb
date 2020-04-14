@@ -1,6 +1,6 @@
 var socket = io();
 var player_name = '';
-var player_role = 'liberal';
+var player_roles = ['liberal', 'fascist', 'hitler'];
 document.getElementById('play_button').onclick = function() {
     player_name = document.getElementById("input_name").value;
     if(player_name == '') {
@@ -15,7 +15,7 @@ document.getElementById('play_button').onclick = function() {
     document.getElementById('display_name').style.color = '#5A9BA6'
     document.getElementById('input_name').style.borderColor = '#5A9BA6'
     localStorage.setItem("name", player_name);
-    localStorage.setItem("role", player_role);
+    localStorage.setItem("role", player_roles[0]);
     socket.emit(player_name);
     location.href='client/game.html'
     }

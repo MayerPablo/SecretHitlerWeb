@@ -1,14 +1,17 @@
 @import url(//db.onlinewebfonts.com/c/34ef7a65a4825cfc84856db83a1ac382?family=Eskapade);
 
+html{
+    font-family: eskapade;
+}
+
 body {
     background-color: #F3E5C3;
     align-content: center;
-    font-family: eskapade;
 }
 
 h1 {
     color: #373633;
-    font-size: 30px;
+    font-size: 3em;
     text-align: center;
     text-shadow: 1px 1px #CA714D, 2px 2px #CA714D, 3px 3px #CA714D, 4px 4px #CA714D;
 }
@@ -19,18 +22,21 @@ h1 {
     top: 0px;
     z-index: -2;
     margin: 0vw 0vw 0vw 0vw;
-    padding: 0vw 0vw 0vw 0vw;
-    width:10vw;
+    padding: 0;
+    width:10em;
     text-align: left;
-    font-size: 1.1vw;
+    font-size: 1em;
     color:#373633;
 }
 
 #logo {
+    margin-top: 0%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    margin-top: 1em;
+    width: 45%;
+    min-width: 350px;
 }
 
 #input_name {
@@ -39,8 +45,8 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    font-size: 2vw;
+    width: 50%;
+    font-size: 2em;
     text-align: center;
     background-color: white;
     color: #373633;
@@ -63,11 +69,12 @@ h1 {
 }
 
 #display_name {
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    font-size: 2vw;
+    width: 100%;
+    font-size: 2em;
     color:#5A9BA6;
 }
 
@@ -77,8 +84,8 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    font-size: 2vw;
+    width: 50%;
+    font-size: 2em;
     background-color: #373633;
     color: white;
     border-color: #373633;
@@ -107,7 +114,7 @@ h1 {
     z-index: -2;
     margin: 0vw 0vw 0vw 0vw;
     padding: 0vw 0vw 0vw 0vw;
-    width: 10vw;
+    width: 20vw;
 }
 
 #hidden_hitler:hover {
