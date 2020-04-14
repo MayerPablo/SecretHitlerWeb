@@ -6,6 +6,9 @@ var express = require('express');
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/client/index.html');
 });
+
+//app.set('Port', 5000);
+
 app.use('/client', express.static(__dirname + '/client'));
 app.use(express.static(path.join(__dirname, 'public')));
 

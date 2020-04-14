@@ -1,6 +1,11 @@
 # SecretHitlerWeb
 Webbrowser Version of SecretHitler
 
+# DISCLAIMER
+Original Creators of the game can be found here:
+- https://www.secrethitler.com/
+Creator of the edited .svg files can be found here:
+- https://yingtongli.me/blog/2019/12/25/secret-hitler.html
 # How to Use:
 - Open Start.bat 
 - Check wheter your server is online by typing 127.0.0.1:2000 or alternatively localhost:2000 in your URL Tab
