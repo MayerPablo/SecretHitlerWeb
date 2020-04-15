@@ -15,7 +15,6 @@ document.getElementById('play_button').onclick = function() {
         document.getElementById('input_name').style.borderColor = 'rgb(139, 9, 9)';
     } else {
         socket.emit('player_data', {name:player_name, role:player_roles[0]});
-        document.getElementById("display_name").innerHTML = "Your Name is: " + player_name + " Waiting for " + (5-p_c).toString() + " other Players!";
         document.getElementById('display_name').style.color = '#5A9BA6';
         document.getElementById('input_name').style.borderColor = '#5A9BA6';
         //PLAYER_NAMES[p_c] = player_name;
@@ -26,7 +25,7 @@ document.getElementById('play_button').onclick = function() {
             document.getElementById('waiting_players').style.display = "block";
             document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " | " + PLAYER_NAMES[item]
         }*/
-        if(p_c >= 5){
+        if(p_c >= 0){
             location.href='/game.html';
         }
     }
@@ -42,6 +41,7 @@ socket.on('update', function(data){
     p_c = Object.keys(PLAYER_NAMES).length
     id = data[0].id
     document.getElementById('waiting_players').innerHTML = "Currently Waiting: ";
+    document.getElementById("display_name").innerHTML = "Your Name is: " + player_name + " Waiting for " + (5-p_c).toString() + " other Players!";
     for (var item in PLAYER_NAMES) {
         document.getElementById('waiting_players').style.display = "block";
         document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " | " + PLAYER_NAMES[item]

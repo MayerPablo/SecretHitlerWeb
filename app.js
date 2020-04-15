@@ -43,7 +43,7 @@ io.sockets.on('connection', function(socket) {
     });
 });
 
-// Updates Things
+// Updates Things every Second
 setInterval(function(){
     var packet = [];
         count =  Object.keys(SOCKET_LIST).length;

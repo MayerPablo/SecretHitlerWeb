@@ -15,7 +15,7 @@ body {
     font-family: eskapade;
 }
 
-#lib_policy_one {
+.lib_policies {
     opacity: 0;
     position: absolute;
     transition-timing-function: ease-out;
@@ -26,12 +26,19 @@ body {
     min-width: 40px;
     height:auto;
 }
-/*
-#dwadwad {
-    margin-left: auto;
-    margin-right: auto;
-}
-*/
+
+/*#lib_policy_one {
+    opacity: 0;
+    position: absolute;
+    transition-timing-function: ease-out;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    width:5.7vw;
+    min-width: 40px;
+    height:auto;
+}*/
+
 #version{
     position: absolute;
     left: 0px;
