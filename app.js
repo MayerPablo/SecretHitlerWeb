@@ -18,7 +18,7 @@ app.get('/game.html', function(req, res) {
 app.use('/client', express.static(__dirname + '/client'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(2000);
+server.listen(8080, '0.0.0.0');
 console.log('Server started.');
 
 io.sockets.on('connection', function(socket) {
@@ -53,4 +53,4 @@ setInterval(function(){
         console.log(packet);
         socket.emit('update', packet);
     }
-}, 1000/120);
+}, 1000);

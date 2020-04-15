@@ -22,10 +22,10 @@ document.getElementById('play_button').onclick = function() {
         localStorage.setItem("name", player_name);
         localStorage.setItem("role", player_roles[0]);
         document.getElementById('waiting_players').innerHTML = "Currently Waiting: ";
-        for (var item in PLAYER_NAMES) {
+        /*for (var item in PLAYER_NAMES) {
             document.getElementById('waiting_players').style.display = "block";
-            document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " " + PLAYER_NAMES[item]
-        }
+            document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " | " + PLAYER_NAMES[item]
+        }*/
         if(p_c >= 5){
             location.href='/game.html';
         }
@@ -39,6 +39,33 @@ socket.on('definetlyNoEasteregg', function(data){
 socket.on('update', function(data){     
     console.log(data[0].count);
     PLAYER_NAMES = data[0].players;
-    p_c = data[0].count;
+    p_c = Object.keys(PLAYER_NAMES).length
     id = data[0].id
+    document.getElementById('waiting_players').innerHTML = "Currently Waiting: ";
+    for (var item in PLAYER_NAMES) {
+        document.getElementById('waiting_players').style.display = "block";
+        document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " | " + PLAYER_NAMES[item]
+    }
+    switch (p_c) {
+        case 5:
+            document.getElementById('play_button').innerHTML = "Play with 5";
+            break;
+        case 6:
+            document.getElementById('play_button').innerHTML = "Play with 6";
+            break;
+        case 7:
+            document.getElementById('play_button').innerHTML = "Play with 7";
+            break;
+        case 8:
+            document.getElementById('play_button').innerHTML = "Play with 8";
+            break;
+        case 9:
+            document.getElementById('play_button').innerHTML = "Play with 9";
+            break;
+        case 10:
+            document.getElementById('play_button').innerHTML = "Play with 10";
+            break;
+        default:
+            break;
+    }
 });
