@@ -1,3 +1,6 @@
+var socket = io();
+socket.emit('Fuck this shit');
+
 document.getElementById('player_name').innerHTML = localStorage.name;
 var role = localStorage.role;
 var lib_art = ['lib_policy_one', 'lib_policy_two', 'lib_policy_three', 'lib_policy_four', 'lib_policy_five'];

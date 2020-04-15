@@ -22,3 +22,5 @@ https://yingtongli.me/blog/2019/12/25/secret-hitler.html
 LOCAL STORAGE DAMIT MAN NEULADEN KANN
 https://www.youtube.com/watch?v=t-PPgiLmaoo
 https://hackernoon.com/how-to-build-a-multiplayer-browser-game-4a793818c29b
+https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array
+https://stackoverflow.com/questions/12344675/how-to-access-a-javascript-object-value-without-knowing-the-key

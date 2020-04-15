@@ -76,6 +76,7 @@ h1 {
     width: 100%;
     font-size: 2em;
     color:#5A9BA6;
+    text-shadow: 1px 1px #373633, 1.5px 1.5px #373633, 2px 2px #373633, 2.5px 2.5px #373633, 3px 3px #373633, 3.5px 3.5px #373633, 4px 4px #373633;
 }
 
 #play_button {
@@ -103,6 +104,14 @@ h1 {
     border-radius: 0px;
     border-width: 0.3vw;
     text-shadow: 1px 1px #373633, 2px 2px #373633, 3px 3px #373633, 4px 4px #373633;
+}
+
+#waiting_players{
+    display: none;
+    color: #373633;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 1px 1px #CA714D, 2px 2px #CA714D, 3px 3px #CA714D, 4px 4px #CA714D;
 }
 
 #hidden_hitler {
