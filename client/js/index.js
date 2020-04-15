@@ -16,10 +16,15 @@ document.getElementById('play_button').onclick = function() {
     document.getElementById('input_name').style.borderColor = '#5A9BA6'
     localStorage.setItem("name", player_name);
     localStorage.setItem("role", player_roles[0]);
-    socket.emit(player_name);
+    socket.emit('player_data', {name:player_name, role:player_roles[0]});
     location.href='client/game.html'
     }
 }
-socket.on('eegg', function(data){
+
+socket.on('definetlyNoEasteregg', function(data){
     console.log(data.msg);
+});
+
+socket.on('update', function(data){     
+    console.log(data[0].id);
 });
