@@ -27,6 +27,7 @@ h1 {
     text-align: left;
     font-size: 1em;
     color:#373633;
+    text-shadow: 1px 1px #CA714D, 1.5px 1.5px #CA714D, 2px 2px #CA714D, 2.5px 2.5px #CA714D, 3px 3px #CA714D, 3.5px 3.5px #CA714D, 4px 4px #CA714D;
 }
 
 #logo {
@@ -35,7 +36,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
-    width: 45%;
+    width: 35%;
     min-width: 350px;
 }
 
@@ -79,13 +80,41 @@ h1 {
     text-shadow: 1px 1px #373633, 1.5px 1.5px #373633, 2px 2px #373633, 2.5px 2.5px #373633, 3px 3px #373633, 3.5px 3.5px #373633, 4px 4px #373633;
 }
 
-#play_button {
+#name_button {
     font-family: eskapade;
     transition-duration: 400ms;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    font-size: 2em;
+    background-color: #373633;
+    color: white;
+    border-color: #373633;
+    border-style: solid;
+    border-radius: 1.5vw;
+    border-width: 0.3vw;
+    text-shadow: 1px 1px #CA714D, 2px 2px #CA714D, 3px 3px #CA714D, 4px 4px #CA714D;
+}
+
+#name_button:hover {
+    transition-duration: 400ms;
+    background-color: #5A9BA6;
+    color: whitesmoke;
+    border-color: #5A9BA6;
+    border-radius: 0px;
+    border-width: 0.3vw;
+    text-shadow: 1px 1px #373633, 2px 2px #373633, 3px 3px #373633, 4px 4px #373633;
+}
+
+#play_button {
+    font-family: eskapade;
+    transition-duration: 400ms;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 1em;
     font-size: 2em;
     background-color: #373633;
     color: white;

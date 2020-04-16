@@ -1,6 +1,9 @@
 var socket = io();
 
-document.getElementById('player_name').innerHTML = localStorage.name;
+name = localStorage.name
+document.getElementById('player_name').innerHTML = name;
+//socket.emit('role', name)
+
 var role = localStorage.role;
     lib_art = ['lib_policy_one', 'lib_policy_two', 'lib_policy_three']; //, 'lib_policy_two', 'lib_policy_three', 'lib_policy_four', 'lib_policy_five';
     fas_art = ['fas_policy_one']; //, 'fas_policy_two', 'fas_policy_three', 'fas_policy_four', 'fas_policy_five'
@@ -52,4 +55,7 @@ window.onresize = function(){
     }
 }
 
+
 //((document.getElementById('lpf').style.width.replace("vw", "")) / parseFloat(document.getElementById('lpf').style.width.replace("vw", "")))*8
+//process.setMaxListeners(0);
+//socket.emit('role', name)
