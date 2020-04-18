@@ -45,6 +45,10 @@ io.sockets.on('connection', function(socket) {
         }
     });
 
+    socket.on('role', function() {
+        console.log('HUREHUREHUREHURE');
+    });
+
     // Shows on console when Player disconnects and deletes the data associated with the Player
     socket.on('disconnect', function(){
         console.log('Old socket closed connection; socket ID:', socket.id)

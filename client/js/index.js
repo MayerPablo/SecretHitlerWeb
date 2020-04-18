@@ -47,7 +47,10 @@ socket.on('update', function(data){
     p_c = Object.keys(PLAYER_NAMES).length
     id = data[0].id
     document.getElementById('waiting_players').innerHTML = "Currently Waiting: ";
-    document.getElementById("display_name").innerHTML = "Your Name is: " + player_name + " Waiting for " + (5-p_c).toString() + " other Players!";
+    document.getElementById("display_name").innerHTML = "Your Name is: " + player_name + " Waiting for at least " + (5-p_c).toString() + " other Players!";
+    if (5-p_c <= 0) {
+        document.getElementById("display_name").innerHTML = "Your Name is: " + player_name + " | Waiting for no other players!";
+    }
     for (var item in PLAYER_NAMES) {
         document.getElementById('waiting_players').style.display = "block";
         document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " | " + PLAYER_NAMES[item]
@@ -79,6 +82,8 @@ socket.on('update', function(data){
             localStorage.setItem("role", player_roles_10);
             break;
         default:
+            document.getElementById('play_button').innerHTML = "FUCK U DARIO";
+            //document.getElementById('play_button').style.display = "none";
             break;
     }
 });
