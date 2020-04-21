@@ -31,3 +31,4 @@ https://www.google.com/search?client=firefox-b-d&sxsrf=ALeKk02BO8nW86nFempQOinY4
 https://www.docker.com/get-started
 https://github.com/rcombs/node-random
 https://spdx.org/licenses/CC-BY-SA-4.0.html#licenseText
+https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array

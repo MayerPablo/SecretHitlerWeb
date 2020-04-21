@@ -59,31 +59,35 @@ socket.on('update', function(data){
         case 1:
             document.getElementById('play_button').style.display = "block";
             document.getElementById('play_button').innerHTML = "Play with 5";
-            localStorage.setItem("role", player_roles_5);
+            localStorage.setItem("roles", stringify(player_roles_5));
             break;
         case 6:
             document.getElementById('play_button').innerHTML = "Play with 6";
-            localStorage.setItem("role", player_roles_6);
+            localStorage.setItem("roles", stringify(player_roles_6));
             break;
         case 7:
             document.getElementById('play_button').innerHTML = "Play with 7";
-            localStorage.setItem("role", player_roles_7);
+            localStorage.setItem("roles", stringify(player_roles_7));
             break;
         case 8:
             document.getElementById('play_button').innerHTML = "Play with 8";
-            localStorage.setItem("role", player_roles_8);
+            localStorage.setItem("roles", stringify(player_roles_8));
             break;
         case 9:
             document.getElementById('play_button').innerHTML = "Play with 9";
-            localStorage.setItem("role", player_roles_9);
+            localStorage.setItem("roles", stringify(player_roles_9));
             break;
         case 10:
             document.getElementById('play_button').innerHTML = "Play with 10";
-            localStorage.setItem("role", player_roles_10);
+            localStorage.setItem("roles", stringify(player_roles_10));
             break;
         default:
-            document.getElementById('play_button').innerHTML = "FUCK U DARIO";
+            document.getElementById('play_button').innerHTML = "Playercount not supported";
             //document.getElementById('play_button').style.display = "none";
             break;
     }
 });
+
+function stringify(array) {
+    return JSON.stringify(array);
+}

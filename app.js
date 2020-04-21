@@ -45,8 +45,21 @@ io.sockets.on('connection', function(socket) {
         }
     });
 
-    socket.on('role', function() {
-        console.log('HUREHUREHUREHURE');
+    // Role Logic
+    socket.on('role', function(data) {
+        console.log(data.r);
+        for (var key in SOCKET_LIST) {
+            socket = SOCKET_LIST[key];
+            // Get nativeMath random integer
+            roles = JSON.parse(data.r);
+            var random_value = random.integer(0, roles.length-1);
+                player_role = roles[random_value];
+            const index = roles.indexOf(player_role);
+            if (index > -1) {
+                roles.splice(index, 1);
+            }
+        socket.emit("own_role", {pr:player_role});
+        }
     });
 
     // Shows on console when Player disconnects and deletes the data associated with the Player
@@ -60,9 +73,6 @@ io.sockets.on('connection', function(socket) {
 
 // Updates Things every Second
 setInterval(function(){
-    // Get nativeMath random integer from random.org
-    value = random.integer(1, 10);
-    console.log(value);
     // Defining the packet which gets send to the client
     var packet = [];
         count =  Object.keys(SOCKET_LIST).length;
@@ -71,7 +81,7 @@ setInterval(function(){
         // Add all the relevant information into the packet
         packet.push({id:socket.id, count:count, players:PLAYER_LIST});
         // Printing out the packet for debug
-        console.log(packet);
+        //console.log(packet);
         // Sending the packet
         socket.emit('update', packet);
         //socket.on('role', function(data) {
