@@ -33,11 +33,13 @@ io.sockets.on('connection', function(socket) {
     // Easter-Egg, Was a tool to test wheter the client and server can recieve/send messages from/to each other
     socket.emit('definetlyNoEasteregg', {msg:'You found the Easteregg!'});
 
+    // Pairs Socket-ID's with player names
     socket.on('player_name', function(data){
         console.log(data.name);
         PLAYER_LIST[socket.id] = data.name
     });
 
+    // Sends the players from the lobby to game.html
     socket.on('s_g', function() {
         for (var item in SOCKET_LIST) {
             var socket = SOCKET_LIST[item];
@@ -48,23 +50,23 @@ io.sockets.on('connection', function(socket) {
     // Role Logic
     socket.on('role', function(data) {
         console.log(data.r);
-        for (var key in SOCKET_LIST) {
-            socket = SOCKET_LIST[key];
-            // Get nativeMath random integer
-            roles = JSON.parse(data.r);
-            var random_value = random.integer(0, roles.length-1);
-                player_role = roles[random_value];
-            const index = roles.indexOf(player_role);
-            if (index > -1) {
-                roles.splice(index, 1);
-            }
-        socket.emit("own_role", {pr:player_role});
+        // Get nativeMath random integer
+        roles = JSON.parse(data.r);
+        var random_value = random.integer(0, roles.length-1);
+            player_role = roles[random_value];
+            remaining_roles = [];
+        const index = roles.indexOf(player_role);
+        if (index > -1) {
+            roles.splice(index, 1);
+            remaining_roles = stringify(roles);
         }
+        socket.emit("own_role", {pr:player_role, rr:remaining_roles});
     });
 
     // Shows on console when Player disconnects and deletes the data associated with the Player
     socket.on('disconnect', function(){
         console.log('Old socket closed connection; socket ID:', socket.id)
+        socket.emit("reset_roles");
         delete SOCKET_LIST[socket.id];
         delete PLAYER_LIST[socket.id];
     });
@@ -84,10 +86,18 @@ setInterval(function(){
         //console.log(packet);
         // Sending the packet
         socket.emit('update', packet);
-        //socket.on('role', function(data) {
-        //    console.log(data.name);
-        //})
     }
 }, 1000);
 
+function stringify(array) {
+    return JSON.stringify(array);
+}
+
+function prnt(str) {
+    console.log(str);
+}
+
 // (node:18884) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 hure listeners added to [Socket]. Use emitter.setMaxListeners() to increase limit
+        //socket.on('role', function(data) {
+        //    console.log(data.name);
+        //})

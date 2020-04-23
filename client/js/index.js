@@ -56,7 +56,7 @@ socket.on('update', function(data){
         document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " | " + PLAYER_NAMES[item]
     }
     switch (p_c) {
-        case 1:
+        case 2:
             document.getElementById('play_button').style.display = "block";
             document.getElementById('play_button').innerHTML = "Play with 5";
             localStorage.setItem("roles", stringify(player_roles_5));
@@ -90,4 +90,8 @@ socket.on('update', function(data){
 
 function stringify(array) {
     return JSON.stringify(array);
+}
+
+function prnt(str) {
+    console.log(str);
 }

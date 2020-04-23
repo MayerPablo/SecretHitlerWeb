@@ -7,35 +7,37 @@ var socket = io();
 
 document.getElementById('player_name').innerHTML = name;
 console.log(localStorage.roles);
-console.log(localStorage.roles);
-console.log(localStorage.roles);
 
 socket.emit('role', {r:localStorage.roles});
 socket.on('own_role', function(data) {
     own_role = data.pr;
-    console.log(own_role);
+    localStorage.roles = data.rr;
+    prnt(localStorage.roles);
+    if(own_role == 'Liberal') {
+        document.getElementById('player_role').innerHTML = "Liberal";
+    } else if(own_role == 'Fascist') {
+        document.getElementById('player_role').innerHTML = "Fascist";
+    } else if(own_role == 'Hitler'){
+        document.getElementById('player_role').innerHTML = "Hitler";
+    } else {
+        document.getElementById('player_role').innerHTML = "ERROR";
+    }
 });
 
-if(own_role == 'Liberal') {
-    document.getElementById('player_role').innerHTML = "Liberal";
-} else if(own_role == 'Fascist') {
-    document.getElementById('player_role').innerHTML = "Fascist";
-} else if(own_role == 'Hitler'){
-    document.getElementById('player_role').innerHTML = "Hitler";
-} else {
-    document.getElementById('player_role').innerHTML = "ERROR";
-}
+socket.on("reset_roles", function(){
+    localStorage.roles.push(own_role);
+});
 
 document.getElementById('lpf').style.width = "50vw";
 document.getElementById('fpf').style.width = "50vw"; 
 
-// Responsiveness on load
-var lib_pos_x = (document.getElementById('lpf').offsetLeft + (document.getElementById('lpf').clientWidth / 100)*15.25); //4h
-    lib_pos_y = (document.getElementById('lpf').offsetTop + (document.getElementById('lpf').clientHeight / 100)*23.4); //4h
-    fas_pos_x = (document.getElementById('fpf').offsetLeft + (document.getElementById('fpf').clientWidth / 100)*8.3); //4h
-    fas_pos_y = (document.getElementById('fpf').offsetTop + (document.getElementById('fpf').clientHeight / 100)*25.1); //4h
 
 window.onload = function() {
+    // Responsiveness on load
+    var lib_pos_x = (document.getElementById('lpf').offsetLeft + (document.getElementById('lpf').clientWidth / 100)*15.25); //4h
+        lib_pos_y = (document.getElementById('lpf').offsetTop + (document.getElementById('lpf').clientHeight / 100)*23.4); //4h
+        fas_pos_x = (document.getElementById('fpf').offsetLeft + (document.getElementById('fpf').clientWidth / 100)*8.3); //4h
+        fas_pos_y = (document.getElementById('fpf').offsetTop + (document.getElementById('fpf').clientHeight / 100)*25.1); //4h
     for (var index = 0; index < lib_art.length; index++) {
         document.getElementById(lib_art[index]).style.transform = "translate( " + (lib_pos_x + document.getElementById('lpf').clientWidth*index/6.95).toString() + "px" + ", " + (lib_pos_y).toString() + "px" +")";
     }
@@ -76,7 +78,9 @@ window.onresize = function(){
     }
 }
 
-
+function prnt(str) {
+    console.log(str);
+}
 //old stuff
 
 
