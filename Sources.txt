@@ -32,3 +32,7 @@ https://www.docker.com/get-started
 https://github.com/rcombs/node-random
 https://spdx.org/licenses/CC-BY-SA-4.0.html#licenseText
 https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
+https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage
+https://github.com/uuidjs/uuid#deep-requires-now-deprecated
+https://stackoverflow.com/questions/7042340/error-cant-set-headers-after-they-are-sent-to-the-client
+https://www.techbii.com/why-are-big-companies-using-node-js-for-their-apps/

@@ -8,11 +8,9 @@ var socket = io();
 document.getElementById('player_name').innerHTML = name;
 console.log(localStorage.roles);
 
-socket.emit('role', {r:localStorage.roles});
+
 socket.on('own_role', function(data) {
     own_role = data.pr;
-    localStorage.roles = data.rr;
-    prnt(localStorage.roles);
     if(own_role == 'Liberal') {
         document.getElementById('player_role').innerHTML = "Liberal";
     } else if(own_role == 'Fascist') {
@@ -24,15 +22,20 @@ socket.on('own_role', function(data) {
     }
 });
 
-socket.on("reset_roles", function(){
-    localStorage.roles.push(own_role);
-});
+
+socket.on("remaining_roles", function(data){
+    localStorage.roles = data.rr;
+    prnt(localStorage.roles);
+})
+
 
 document.getElementById('lpf').style.width = "50vw";
 document.getElementById('fpf').style.width = "50vw"; 
 
 
 window.onload = function() {
+    // Set roles
+    socket.emit('role_logic', {r:localStorage.roles});
     // Responsiveness on load
     var lib_pos_x = (document.getElementById('lpf').offsetLeft + (document.getElementById('lpf').clientWidth / 100)*15.25); //4h
         lib_pos_y = (document.getElementById('lpf').offsetTop + (document.getElementById('lpf').clientHeight / 100)*23.4); //4h
@@ -83,6 +86,10 @@ function prnt(str) {
 }
 //old stuff
 
+/*socket.on("reset_roles", function(){
+    prnt(own_role);
+    localStorage.roles.push(own_role);
+});*/
 
 //document.getElementById(lib_art[0]).style.transform = "translate( " + pos_x + ", 0)";
 //document.getElementById(lib_art[0]).style.transform = "translate( " + pos_x + ", " + pos_y +")";
