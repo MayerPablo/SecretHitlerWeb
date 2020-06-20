@@ -38,7 +38,7 @@ io.sockets.on('connection', function(socket) {
     socket.id = sha256(random.integer(1, 1000).toString());
     SOCKET_LIST[socket.id] = socket;
 
-    roles = game_types[Object.keys(SOCKET_LIST).length];
+    roles = game_types[Object.keys(SOCKET_LIST).length]; // Chooses right set of roles based on sockets/ppl connected to the server
     prnt('New socket connection; socket ID: ' + socket.id);
     // Easter-Egg, Was a tool to test wheter the client and server can recieve/send messages from/to each other
     socket.emit('definetlyNoEasteregg', {msg:'You found the Easteregg!'});

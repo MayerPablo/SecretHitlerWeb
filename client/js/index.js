@@ -56,9 +56,9 @@ socket.on('update', function(data){
         document.getElementById('waiting_players').innerHTML = document.getElementById('waiting_players').innerHTML + " | " + PLAYER_NAMES[item]
     }
     switch (p_c) {
-        case 2:
+        case 1:
             document.getElementById('play_button').style.display = "block";
-            document.getElementById('play_button').innerHTML = "Play with 5";
+            document.getElementById('play_button').innerHTML = "Play with 1 (Only for Debugging)";
             localStorage.setItem("roles", stringify(player_roles_5));
             break;
         case 6:
