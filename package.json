@@ -6,7 +6,7 @@
   "dependencies": {
     "exports": "0.0.1",
     "express": "^4.18.2",
-    "express-session": "^1.17.1",
+    "express-session": "^1.19.0",
     "global": "^4.4.0",
     "js-sha256": "^0.9.0",
     "random": "^2.2.0",
